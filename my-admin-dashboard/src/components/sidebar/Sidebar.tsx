@@ -26,7 +26,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="absolute left-0 top-0 h-screen flex flex-col w-64 bg-white border-r border-gray-200">
+    <div className=" h-screen flex flex-col w-[240px] bg-white border-r border-gray-200">
       <div className="h-20 flex items-center">
         <Link to="/">
           <span className="logo text-2xl text-[#D8543C] ml-4 font-bold">
