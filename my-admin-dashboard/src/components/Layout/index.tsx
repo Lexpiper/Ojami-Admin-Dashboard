@@ -11,11 +11,11 @@ const Layout = ({ children } :Props) => {
       <div className="">
         <Sidebar />
       </div>
-      <div className="border-2 w-full">
-        <div className="sticky">
+      <div className=" w-full">
+        <div className="sticky bg-[#f5f4f7] ">
           <Navbar />
         </div>
-        <div className="">
+        <div className="bg-[#f5f4f7] h-screen">
           {children}
         </div>
       </div>
