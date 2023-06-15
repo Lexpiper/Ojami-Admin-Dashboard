@@ -15,7 +15,7 @@ const Layout = ({ children } :Props) => {
         <div className="sticky bg-[#f5f4f7] ">
           <Navbar />
         </div>
-        <div className="bg-[#f5f4f7] h-screen">
+        <div className="bg-[#f5f4f7] h-screen overflow-y-scroll px-10">
           {children}
         </div>
       </div>
