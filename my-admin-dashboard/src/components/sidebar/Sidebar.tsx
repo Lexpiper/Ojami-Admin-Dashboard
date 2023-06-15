@@ -29,7 +29,7 @@ const Sidebar = () => {
     <div className=" h-screen flex flex-col w-[240px] bg-white border-r border-gray-200">
       <div className="h-20 flex items-center">
         <Link to="/">
-          <span className="logo text-2xl text-[#D8543C] ml-4 font-bold">
+          <span className="logo text-2xl text-[#34A853] ml-4 font-bold">
             Ojami
           </span>
         </Link>
