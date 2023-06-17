@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import dashIcon from "../../assets/dashIcon.png";
-import productIcon from "../../assets/productIcon.png";
-import reportIcon from "../../assets/reportIcon.png";
-import orderIcon from "../../assets/orderIcon.png";
+import vector1 from "../../assets/vector1.svg";
+import vector2 from "../../assets/vector2.svg";
+import vector3 from "../../assets/vector3.svg";
+import vector4 from "../../assets/vector4.svg";
 
 interface MenuItem {
   id: string;
@@ -12,10 +12,10 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { id: "dashboard", label: "Dashboard", icon: dashIcon },
-  { id: "orders", label: "Orders", icon: orderIcon },
-  { id: "products", label: "Products", icon: productIcon },
-  { id: "report", label: "Report", icon: reportIcon },
+  { id: "/", label: "Dashboard", icon: vector1 },
+  { id: "orders", label: "Orders", icon: vector3 },
+  { id: "products", label: "Products", icon: vector2 },
+  { id: "report", label: "Report", icon: vector4 },
 ];
 
 const Sidebar = () => {
@@ -24,7 +24,7 @@ const Sidebar = () => {
   const handleClick = (menu: string) => {
     setActive(menu);
   };
-
+  console.log(menuItems);
   return (
     <div className=" h-screen flex flex-col w-[240px] bg-white border-r border-gray-200">
       <div className="h-20 flex items-center">
@@ -34,18 +34,19 @@ const Sidebar = () => {
           </span>
         </Link>
       </div>
-      <div className="flex-grow">
+      <div className="flex-grow border">
         {menuItems.map((menuItem: MenuItem) => (
-          <div
-            key={menuItem.id}
-            onClick={() => handleClick(menuItem.id)}
-            className={`${
-              active === menuItem.id ? "bg-[#EBF9EF]" : ""
-            } flex items-center py-3 pl-6 pr-4 hover:bg-[#EBF9EF] cursor-pointer`}
-          >
-            <img className="w-6 h-6" src={menuItem.icon} alt="" />
-            <div className="ml-4">{menuItem.label}</div>
-          </div>
+          <Link key={menuItem.id} to={menuItem.id}>
+            <div
+              onClick={() => handleClick(menuItem.id)}
+              className={`${
+                active === menuItem.id ? "bg-[#EBF9EF]" : ""
+              } flex items-center py-3 pl-6 pr-4 hover:bg-[#EBF9EF] cursor-pointer mb-4`}
+            >
+              <img className="w-4 h-4" src={menuItem.icon} alt="" />
+              <div className="ml-4 font-Sfd text-[14px]">{menuItem.label}</div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
