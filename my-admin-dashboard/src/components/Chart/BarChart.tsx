@@ -47,7 +47,7 @@ const BarChart = ({ data, labels, barWidth = 0.6 }: BarChartProps) => {
               },
               y: {
                 ticks: {
-                  callback: (value) => `₦ ${value.toLocaleString(undefined)}`
+                  callback: (value) => `₦ ${value.toLocaleString(undefined)}`,
                 },
                 grid: {
                   display: false,
