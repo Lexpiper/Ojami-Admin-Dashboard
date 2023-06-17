@@ -1,11 +1,12 @@
+import TabHandler from "../TabHandler/TabHandler";
+import Table from "../Table/Table";
+
 const TopProducts = () => {
   return (
-    <div>
+    <div className="">
+      <TabHandler title={"Top Selling Products"} />
       <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae impedit
-        maxime blanditiis sit animi cum distinctio doloremque voluptate. Dolorem
-        minima vitae quo placeat eligendi repellendus explicabo ducimus ipsa id
-        libero.
+        <Table />
       </div>
     </div>
   );
