@@ -3,6 +3,8 @@ import Widgets from "../../components/Widgets/Widgets";
 import { widget } from "./data.js";
 import vector from "../../assets/Vector.png";
 import Barchart from "../../components/Chart/BarChart.js";
+import TopProducts from "../../components/TopProducts/TopProducts.js";
+import TabHandler from "../../components/TabHandler/TabHandler.js";
 
 const Home = () => {
   const data = [
@@ -36,15 +38,15 @@ const Home = () => {
             <Widgets data={i} key={index} />
           ))}
         </div>
-        <div className="w-full h-full border-2 ">
-          <div className="flex items-center">
-
-          </div>
+        <div>
+          <TabHandler title={"General Activity"}/>
+        </div>
+        <div className="w-full h-full ">
           <Barchart data={data} labels={labels} />
         </div>
-        {/* <div className="w-full h-full">
-          <TopProducts/>
-        </div> */}
+        <div className="w-full h-full mt-20">
+          <TopProducts />
+        </div>
       </div>
     </Layout>
   );
