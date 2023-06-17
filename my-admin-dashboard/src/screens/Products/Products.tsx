@@ -1,8 +1,14 @@
+import Layout from "../../components/Layout";
+import TopProducts from "../../components/TopProducts/TopProducts";
 
 const Products = () => {
   return (
-    <div>Products</div>
-  )
-}
+    <Layout>
+      <div className="mt-8">
+        <TopProducts/>
+      </div>
+    </Layout>
+  );
+};
 
-export default Products
+export default Products;
