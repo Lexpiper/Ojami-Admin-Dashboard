@@ -1,4 +1,4 @@
-import dashIcon from "../../assets/dashIcon.png";
+import vector1 from "../../assets/vector1.svg";
 
 interface Props {
   data: {
@@ -13,7 +13,6 @@ interface Props {
 }
 
 const Widgets = ({ data }: Props) => {
-  console.log(data);
   return (
     <div
       className={`rounded-[10px] ${data.bgColor} px-6 py-4 shadow-sm ${data.color} w-[300px]`}
@@ -25,7 +24,7 @@ const Widgets = ({ data }: Props) => {
           >
             {data.title}
           </div>
-          {data.iconType && <img className="" src={dashIcon} alt="" />}
+          {data.iconType && <img className="" src={vector1} alt="" />}
         </div>
         <div className="font-Sfd font-bold text-[25.61px] leading-[38.46px] py-4 ">
           NGN <span>{data.amount.toLocaleString(undefined)}</span>
